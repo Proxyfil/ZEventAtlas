@@ -4,11 +4,11 @@ function updateFavicon(colorScheme) {
 	const faviconFallback = document.head.querySelector('.js-site-favicon[type="image/png"]')
 	if (favicon && faviconFallback) {
 		if (colorScheme || colorScheme == 'dark') {
-			favicon.href = '_img/favicon-zevent.png'
-			faviconFallback.href = '_img/favicon-zevent.png'
+			favicon.href = 'img/favicon-zevent.png'
+			faviconFallback.href = 'img/favicon-zevent.png'
 		} else {
-			favicon.href = '_img/favicon-zevent.png'
-			faviconFallback.href = '_img/favicon-zevent.png'
+			favicon.href = 'img/favicon-zevent.png'
+			faviconFallback.href = 'img/favicon-zevent.png'
 		}
 	}
 }
