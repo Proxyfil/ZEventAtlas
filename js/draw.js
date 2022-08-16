@@ -290,15 +290,13 @@ function initDraw() {
 	function exportJson() {
 		const exportObject = generateExportObject()
 
-		let jsonString = JSON.stringify(exportObject, null, 4)
+		let jsonString = JSON.stringify(exportObject, null, "\t")
 		jsonString = jsonString.split("\n")
 		jsonString = jsonString.join("\n    ")
 		jsonString = "    " + jsonString
 		exportArea.value = jsonString
-		let directPostUrl = "https://www.reddit.com/r/placeAtlas2/submit?selftext=true&title=New%20Submission&text=" + encodeURIComponent(exportArea.value)
-		if (jsonString.length > 7493) {
-			directPostUrl = "https://www.reddit.com/r/placeAtlas2/submit?selftext=true&title=New%20Submission&text=" + encodeURIComponent("    " + JSON.stringify(exportObject))
-		}
+
+		let directPostUrl = "https://www.discord.gg/"
 		document.getElementById("exportDirectPost").href = directPostUrl
 
 		exportModal.show()
@@ -756,8 +754,8 @@ function initDraw() {
 	]
 
 	scaleZoomOrigin = [
-		2000 / 2 - center[0],// + container.offsetLeft
-		2000 / 2 - center[1]// + container.offsetTop
+		1000 / 2 - center[0],// + container.offsetLeft
+		1000 / 2 - center[1]// + container.offsetTop
 	]
 
 	applyView()
@@ -886,7 +884,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [2000 / 2 - periodCenter[0], 2000 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [1000 / 2 - periodCenter[0], 1000 / 2 - periodCenter[1]]
 			applyView()
 		})
 
@@ -953,7 +951,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [2000 / 2 - periodCenter[0], 2000 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [1000 / 2 - periodCenter[0], 1000 / 2 - periodCenter[1]]
 			applyView()
 		})
 		function endPeriodUpdate(value) {

@@ -14,7 +14,7 @@
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8">
 		<title>ZEvent2022 Atlas</title>
@@ -51,7 +51,7 @@
 		<link rel="manifest" href="./manifest.webmanifest">
 		<script type="module" src="./pwabuilder-sw-register.js"></script>
 		<script src="./js/favicon.js" defer></script>
-		<script type="application/ld+json">
+		<!-- <script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "WebSite",
@@ -109,7 +109,7 @@
 				"image": "https://place-atlas.stefanocoding.me/img/logo.png",
 				"description": "An interactive map of Reddit's 2022 r/place, with information to each artwork of the canvas."
 			}
-		</script>
+		</script> -->
 	</head>
 	<body>
 		<div id="wrapper" class="listHidden">
@@ -169,9 +169,9 @@
 				</div>
 				<canvas id="linesCanvas"></canvas>
 				<div id="innerContainer">
-					<canvas id="highlightCanvas" width="2000" height="2000"></canvas>
+					<canvas id="highlightCanvas" width="1000" height="1000"></canvas>
 
-					<img id="image" width="2000" height="2000" alt="" />
+					<img id="image" width="1000" height="1000" alt="" />
 				</div>
 			</div>
 			<div class="offcanvas offcanvas-start bg-body" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasList" aria-labelledby="offcanvasListLabel">
@@ -339,13 +339,14 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body d-flex flex-column">
-					<p>Utiliser le bouton "Poster" pour <b>envoyer l'objet anonymement</b> ou copier-le et <b>envoyez-le sur notre serveur discord</b> dans le salon <a href="https://www.reddit.com/r/placeAtlas2/" target="_blank" rel="noopener noreferrer">#zevent-atlas</a> pour que l'ont puisse <b>vous remercier</b> .</p>
+					<p>Utiliser le bouton "Poster sur Discord", copier le code si dessous et envoyez-le sur notre serveur discord dans le salon <b>#zevent-atlas</b> pour que l'ont puisse <b>vous remercier</b> .</p>
+					<p>Si le message est trop long vous pouvez le mettre dans un fichier texte et l'envoyer dans le même salon.</p>
 					<p>Nous vérifierons toutes les soumissions et nous les ajouterons à l'Atlas dans un délai aussi cours que possible.</p>
 					<textarea class="form-control flex-grow-1" cols="40" rows="20" id="exportString" title="Raw JSON string" readonly></textarea>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Terminer</button>
-					<a id="exportDirectPost" class="btn btn-primary disabled" href="#" target="_blank" rel="noopener noreferrer">Poster Anonymement</a>
+					<a id="exportDirectPost" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Poster sur Discord</a>
 				</div>
 				</div>
 			</div>
