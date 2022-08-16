@@ -177,6 +177,24 @@ function createInfoBlock(entry, isPreview) {
 		})
 	}
 
+	if (!(entry.links.streamer === undefined || entry.links.streamer.length == 0)) {
+		const streamerGroupElement = document.createElement("div")
+		streamerGroupElement.className = "btn-group-vertical"
+		linkListElement.appendChild(streamerGroupElement)
+
+		entry.links.streamer.forEach(link => {
+			if (link) {
+				const streamerLinkElement = document.createElement("a")
+				streamerLinkElement.className = "btn btn-primary text-truncate"
+				streamerLinkElement.target = "_blank"
+				streamerLinkElement.rel = "noopener noreferrer"
+				streamerLinkElement.href = "https://twitch.tv/" + link
+				streamerLinkElement.innerHTML = `<i class="bi bi-twitch" aria-hidden="true"></i> ${link}`
+				streamerGroupElement.appendChild(streamerLinkElement)
+			}
+		})
+	}
+
 	// Adds id footer
 	const idElement = document.createElement("div")
 	idElement.className = "py-1"

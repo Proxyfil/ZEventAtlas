@@ -41,10 +41,12 @@ const websiteGroup = document.getElementById("websiteGroup")
 const subredditGroup = document.getElementById("subredditGroup")
 const discordGroup = document.getElementById("discordGroup")
 const wikiGroup = document.getElementById("wikiGroup")
+const streamerGroup = document.getElementById("streamerGroup")
 const exportArea = document.getElementById("exportString")
 
 const subredditPattern = /^(?:(?:(?:(?:(?:https?:\/\/)?(?:(?:www|old|new|np)\.)?)?reddit\.com)?\/)?[rR]\/)?([A-Za-z0-9][A-Za-z0-9_]{2,20})(?:\/[^" ]*)*$/
 const discordPattern = /^(?:(?:https?:\/\/)?(?:www\.)?(?:(?:discord)?\.?gg|discord(?:app)?\.com\/invite)\/)?([^\s/]+?)(?=\b)$/
+//const streamerPattern = /^(?:(?:https?:\/\/)?(?:www\.)?(?:(?:twitch)?\.?tv)\/)?([^\s/]+?)(?=\b)$/
 
 let entryId = 0
 let path = []
@@ -54,6 +56,7 @@ let websiteGroupElements = []
 let subredditGroupElements = []
 let discordGroupElements = []
 let wikiGroupElements = []
+let streamerGroupElements = []
 
 let pathWithPeriods = []
 let periodGroupElements = []
@@ -277,11 +280,14 @@ function initDraw() {
 		const inputWebsite = websiteGroupElements.map(element => element.value.trim()).filter(element => element)
 		const inputSubreddit = subredditGroupElements.map(element => element.value.trim().match(subredditPattern)?.[1]).filter(element => element)
 		const inputDiscord = discordGroupElements.map(element => element.value.trim().match(discordPattern)?.[1]).filter(element => element)
+		//const inputStreamer = streamerGroupElements.map(element => element.value.trim().match(streamerPattern)?.[1]).filter(element => element)
+		const inputStreamer = streamerGroupElements.map(element => element.value.trim()).filter(element => element)
 		const inputWiki = wikiGroupElements.map(element => element.value.trim().replace(/ /g, '_')).filter(element => element)
 
 		if (inputWebsite.length) exportObject.links.website = inputWebsite
 		if (inputSubreddit.length) exportObject.links.subreddit = inputSubreddit
 		if (inputDiscord.length) exportObject.links.discord = inputDiscord
+		if (inputStreamer.length) exportObject.links.streamer = inputStreamer
 		if (inputWiki.length) exportObject.links.wiki = inputWiki
 
 		return exportObject
@@ -364,16 +370,19 @@ function initDraw() {
 			subredditGroupElements = []
 			discordGroupElements = []
 			wikiGroupElements = []
+			streamerGroupElements = []
 
 			// Rebuilds multi-input list
 			websiteGroup.replaceChildren()
 			subredditGroup.replaceChildren()
 			discordGroup.replaceChildren()
+			streamerGroup.replaceChildren()
 			wikiGroup.replaceChildren()
 			addWebsiteFields("", 0, [0])
 			//addSubredditFields("", 0, [0])
 			addDiscordFields("", 0, [0])
 			//addWikiFields("", 0, [0])
+			addStreamerFields("", 0, [0])
 
 			// Resets periods
 			pathWithPeriods = []
@@ -505,6 +514,8 @@ function initDraw() {
 			addDiscordFields(null, array.length, array)
 		} else if (name == "wiki page") {
 			addWikiFields(null, array.length, array)
+		} else if (name == "Streamer link") {
+			addStreamerFields(null, array.length, array)
 		}
 	}
 
@@ -689,6 +700,55 @@ function initDraw() {
 		inputGroup.appendChild(inputButton)
 	}
 
+	function addStreamerFields(link, index, array) {
+		const inputGroup = document.createElement("div")
+		inputGroup.className = "input-group"
+		streamerGroup.appendChild(inputGroup)
+
+		const inputAddon = document.createElement("span")
+		inputAddon.className = "input-group-text"
+		inputAddon.id = "streamerField" + index + "-addon"
+		inputAddon.textContent = "twitch.tv/"
+		inputGroup.appendChild(inputAddon)
+
+		const inputField = document.createElement("input")
+		inputField.type = "text"
+		inputField.className = "form-control"
+		inputField.id = "streamerField" + index
+		inputField.placeholder = "zevent"
+		inputField.spellcheck = false
+		inputField.setAttribute("aria-labelledby", "streamerLabel")
+		inputField.setAttribute("aria-describedby", "streamerField" + index + "-addon")
+		inputField.value = link
+		inputGroup.appendChild(inputField)
+		streamerGroupElements.push(inputField)
+
+		const inputButton = document.createElement("button")
+		inputButton.type = "button"
+		// If button is the last in the array give it the add button
+		if (array.length == index + 1) {
+			inputButton.className = "btn btn-secondary"
+			inputButton.title = "Ajouter un streameur"
+			inputButton.innerHTML = '<i class="bi bi-plus-lg" aria-hidden="true"></i>'
+			inputButton.addEventListener('click', () => addFieldButton(inputButton, inputGroup, streamerGroupElements, index, "Streamer link"))
+		} else {
+			inputButton.className = "btn btn-outline-secondary"
+			inputButton.title = "Retirer un streamer"
+			inputButton.innerHTML = '<i class="bi bi-trash-fill" aria-hidden="true"></i>'
+			inputButton.addEventListener('click', () => removeFieldButton(inputGroup, array, index))
+		}
+
+		inputField.addEventListener('paste', (event) => {
+			let paste = (event.clipboardData || window.clipboardData).getData('text')
+			if (paste) {
+				event.target.value = paste
+				event.preventDefault()
+			}
+		})
+
+		inputGroup.appendChild(inputButton)
+	}
+
 	if (params.has('id')) {
 		entryId = params.get('id')
 		const entry = getEntry(entryId)
@@ -717,6 +777,13 @@ function initDraw() {
 		} else {
 			addDiscordFields("", -1, entry.links.discord)
 		}
+		if (entry.links.streamer.length) {
+			entry.links.streamer.forEach((link, index, array) => {
+				addStreamerFields(link, index, array)
+			})
+		} else {
+			addStreamerFields("", -1, entry.links.streamer)
+		}
 		if (entry.links.wiki.length) {
 			entry.links.wiki.forEach((link, index, array) => {
 				//addWikiFields(link, index, array)
@@ -742,6 +809,7 @@ function initDraw() {
 		//addSubredditFields("", 0, [0])
 		addDiscordFields("", 0, [0])
 		//addWikiFields("", 0, [0])
+		addStreamerFields("", 0, [0])
 	}
 
 	initPeriodGroups()
