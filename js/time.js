@@ -27,7 +27,7 @@ const variationsConfig = {
 			{ "timestamp": 1648823400, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/002_005.png"] },
 			{ "timestamp": 1648825200, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/003_005.png"] },
 			{ "timestamp": 1648827000, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/004_005.png"] },
-			{ "timestamp": 1648828800, "url": "./img/canvas/place30/005.png" },
+			{ "timestamp": 1648828800, "url": "https://zevent-cdn.mog.gg/zplace/full/1660502376223.png" },
 			{ "timestamp": 1648830600, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/006_005.png"] },
 			{ "timestamp": 1648832400, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/007_005.png"] },
 			{ "timestamp": 1648834200, "url": ["./img/canvas/place30/005.png", "./img/canvas/place30/008_005.png"] },
@@ -326,6 +326,7 @@ async function updateBackground(newPeriod = currentPeriod, newVariation = curren
 			}
 			const imageBlob = await fetchResult.blob()
 			imageCache[configObject.url] = URL.createObjectURL(imageBlob)
+			console.log(fetchResult)
 		}
 		image.src = imageCache[configObject.url]
 	} else {

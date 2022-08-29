@@ -92,10 +92,6 @@ function initDraw() {
 	window.renderBackground = renderBackground
 	window.updateHovering = updateHovering
 
-	// let startPeriodField = document.getElementById('startPeriodField')
-	// let endPeriodField = document.getElementById('endPeriodField')
-	// let periodVisbilityInfo = document.getElementById('periodVisbilityInfo')
-
 	let rShiftPressed = false
 	let lShiftPressed = false
 	let shiftPressed = false
@@ -296,10 +292,9 @@ function initDraw() {
 	function exportJson() {
 		const exportObject = generateExportObject()
 
-		let jsonString = JSON.stringify(exportObject, null, "\t")
+		let jsonString = JSON.stringify(exportObject)
 		jsonString = jsonString.split("\n")
 		jsonString = jsonString.join("\n    ")
-		jsonString = "    " + jsonString
 		exportArea.value = jsonString
 
 		let directPostUrl = "https://www.discord.gg/"
