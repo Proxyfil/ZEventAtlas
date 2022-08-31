@@ -18,7 +18,7 @@ window.addEventListener("error", function (e) {
 	let errorMessage = "<h4 class=\"mb-3\">Une erreur est survenue :</h4>"
 	errorMessage += "<p class=\"text-danger\">" + e.message + "</p>"
 	errorMessage += "<p class=\"text-danger\">A la ligne " + e.lineno + "</p>"
-	errorMessage += "<p>Si cette erreur persiste, venez nous en informer sur <a href=\"https://discord.gg/pJkm23b2nA\">notre serveur Discord</a>.</p>"
+	errorMessage += "<p>Si cette erreur persiste, venez nous en informer sur <a href=\"https://discord.gg/vAdMCCaXXR\">notre serveur Discord</a>.</p>"
 	document.getElementById("loadingContent").innerHTML = errorMessage
 })
 
