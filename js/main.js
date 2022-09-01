@@ -66,8 +66,7 @@ init()
 
 async function init() {
 	// For Reviewing Reddit Changes
-	//let resp = await fetch("../tools/temp_atlas.json")
-	atlas = await (await fetch("http://atlas.gdoc.fr/atlas.json")).text()
+	atlas = await (await fetch("https://atlas.gdoc.fr/atlas.json")).text()
 	atlas = JSON.parse(atlas.toString())
 	atlas.sort(function (a, b) {
 		if (a.center[1] < b.center[1]) {
