@@ -129,7 +129,7 @@
 						<ul class="navbar-nav me-auto my-2 my-md-0">
 							<li class="nav-item">
 								<div class="btn-group" role="group">
-									<button id="showListButton" class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasList" aria-controls="offcanvasList">Filtrer les données</button>
+									<button id="showListButton" class="btn btn-outline-primary custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasList" aria-controls="offcanvasList">Filtrer les données</button>
 								</div>
 							</li>
 						</ul>
@@ -144,10 +144,10 @@
 								<a class="nav-link active" href="./" aria-current="page">Atlas</a>
 							</li>
 							<li class="nav-item col-6 col-md-auto">
-								<a class="nav-link" href="./about.html">A propos</a>
+								<a class="nav-link unactive" href="./about.html">A propos</a>
 							</li>
 							<li class="nav-item col-6 col-md-auto">
-								<a class="nav-link" href="https://zevent.gdoc.fr">Retour au GDoc</a>
+								<a class="nav-link unactive" href="https://zevent.gdoc.fr">Retour au GDoc</a>
 							</li>
 						</ul>
 					</div>
@@ -183,8 +183,8 @@
 				</header>
 				<div class="py-3 mx-3 border-bottom">
 					<div class="d-flex gap-2 mb-2">
-						<a class="btn btn-primary w-50" id="drawLink" href="./?mode=draw">Dessiner</a>
-						<button type="button" class="btn btn-primary dropdown-toggle w-50" id="dropdownModes" data-bs-toggle="dropdown" aria-expanded="false">Modes</button>
+						<a class="btn btn-primary custom w-50" id="drawLink" href="./?mode=draw">Dessiner</a>
+						<button type="button" class="btn btn-primary custom dropdown-toggle w-50" id="dropdownModes" data-bs-toggle="dropdown" aria-expanded="false">Modes</button>
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownModes">
 							<li><a class="dropdown-item" href="./">Normal</a></li>
 							<li><a class="dropdown-item" href="./?mode=explore">Explorer</a></li>
@@ -195,11 +195,11 @@
 						</ul>
 					</div>
 					<div class="btn-group w-100 mb-3" role="group" aria-label="Social links and donate button">
-						<a class="btn btn-outline-primary" href="https://discord.gg/vAdMCCaXXR" target="_blank" rel="noopener noreferrer">
+						<a class="btn btn-outline-primary custom" href="https://discord.gg/vAdMCCaXXR" target="_blank" rel="noopener noreferrer">
 							<i class="bi bi-discord" aria-hidden="true"></i>
 							Discord
 						</a>
-						<a class="btn btn-outline-primary" href="https://gdoc.fr" target="_blank" rel="noopener noreferrer">
+						<a class="btn btn-outline-primary custom" href="https://gdoc.fr" target="_blank" rel="noopener noreferrer">
 							<i class="bi bi-globe" aria-hidden="true"></i>
 							GDoc.fr
 						</a>
@@ -274,7 +274,7 @@
 								Refaire
 							</button>
 						</div>
-						<button type="button" class="btn btn-primary" id="finishButton" title="Finir le dessin" disabled>Terminer</button>
+						<button type="button" class="btn btn-primary custom" id="finishButton" title="Finir le dessin" disabled>Terminer</button>
 						<button type="button" class="btn btn-secondary" id="resetButton">Annuler</button>
 
 						<div class="form-check" id="highlightUnchartedLabel">
@@ -288,7 +288,7 @@
 						<h5 class="px-2">Timeline</h5>
 						<p id="periodsStatus" class="px-2 mb-2 small"></p>
 						<div id="periodGroups" class="pt-1"></div>
-						<button type="button" class="btn btn-primary d-block mx-auto" id="periodsAdd">Ajouter une période</button>
+						<button type="button" class="btn btn-primary custom d-block mx-auto" id="periodsAdd">Ajouter une période</button>
 					</div>
 					<div id="hint">
 						<p class="text-center">Si vous voulez contribuer lisez <a href="https://www.reddit.com/r/placeAtlas2/comments/tu203o/how_to_contribute/" target="_blank" rel="noopener noreferrer">ce document</a> pour les instructions.</p>
@@ -320,7 +320,7 @@
 						<label id="streamerLabel" class="form-label">Streamers</label>
 						<div id="streamerGroup" class="mb-3 d-flex flex-column gap-2"></div>
 						<div id="infoButtons" class="d-flex flex-wrap flex-row-reverse gap-2">
-							<input type="submit" class="btn btn-primary flex-fill" id="exportButton" value="Exporter">
+							<input type="submit" class="btn btn-primary custom flex-fill" id="exportButton" value="Exporter">
 							<input type="submit" class="btn btn-secondary flex-fill" id="previewButton" value="Prévisualiser">
 							<button type="button" class="btn btn-secondary flex-fill" id="cancelButton">Retour</button>
 						</div>
@@ -348,7 +348,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Terminer</button>
-					<a id="exportDirectPost" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">Poster sur Discord</a>
+					<a id="exportDirectPost" class="btn btn-primary custom" href="#" target="_blank" rel="noopener noreferrer">Poster sur Discord</a>
 				</div>
 				</div>
 			</div>
