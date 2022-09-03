@@ -395,6 +395,13 @@ body:not([data-dev]) .show-only-on-dev {
 .nav-link.unactive {
 	color: #ffffff;
 }
+.nav-link.active:hover {
+	font-weight: 700;
+	color: #52cc37;
+}
+.nav-link.unactive:hover {
+	color: #dbdbdb;
+}
 
 .period-group {
 	transition: box-shadow 0.15s ease-in-out;
