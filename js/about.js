@@ -28,7 +28,7 @@ fetch('all-authors.txt')
 			else {
 				userEl.innerText = contributor
 			}
-			discordWrapperEl.appendChild(userEl)
-			discordWrapperEl.appendChild(document.createTextNode(' '))
 		}
+		discordWrapperEl.appendChild(userEl)
+		discordWrapperEl.appendChild(document.createTextNode(' '))
 	})

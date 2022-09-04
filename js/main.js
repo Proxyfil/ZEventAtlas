@@ -139,7 +139,7 @@ async function init() {
 		}
 	} else if (mode.startsWith("diff")) {
 		try {
-			const liveResp = await fetch("https://place-atlas.stefanocoding.me/atlas.json")
+			const liveResp = await (await fetch("https://atlas.proxyfil.fr/objects/accepted")).text()
 			let liveJson = await liveResp.json()
 			liveJson = updateAtlasAll(liveJson)
 
