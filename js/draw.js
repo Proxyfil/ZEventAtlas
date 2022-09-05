@@ -50,7 +50,7 @@ const discordPattern = /^(?:(?:https?:\/\/)?(?:www\.)?(?:(?:discord)?\.?gg|disco
 
 let entryId = 0
 let path = []
-let center = [1000, 1000]
+let center = [500, 500]
 
 let websiteGroupElements = []
 let subredditGroupElements = []
@@ -817,8 +817,8 @@ function initDraw() {
 	]
 
 	scaleZoomOrigin = [
-		1000 / 2 - center[0],// + container.offsetLeft
-		1000 / 2 - center[1]// + container.offsetTop
+		500 / 2 - center[0],// + container.offsetLeft
+		500 / 2 - center[1]// + container.offsetTop
 	]
 
 	applyView()
@@ -923,10 +923,10 @@ function initPeriodGroups() {
 		startPeriodEl.addEventListener('input', () => {
 			if (path.length >= 3) {
 				periodCenter = calculateCenter(path)
-				if ((periodCenter[1] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
+				if ((periodCenter[1] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
 					// Second expansion
 					startPeriodEl.value = variationsConfig[variation].expansions[1];
-				} else if ((periodCenter[0] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
+				} else if ((periodCenter[0] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
 					// First expansion
 					startPeriodEl.value = variationsConfig[variation].expansions[0];
 				}
@@ -947,7 +947,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [1000 / 2 - periodCenter[0], 1000 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [500 / 2 - periodCenter[0], 500 / 2 - periodCenter[1]]
 			applyView()
 		})
 
@@ -970,11 +970,11 @@ function initPeriodGroups() {
 			} else {
 				if (path.length >= 3) {
 					periodCenter = calculateCenter(path)
-					if ((periodCenter[1] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
+					if ((periodCenter[1] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
 						// Second expansion
 						startPeriodLeftEl.disabled = true
 						startPeriodRightEl.disabled = false
-					} else if ((periodCenter[0] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
+					} else if ((periodCenter[0] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
 						// First expansion
 						startPeriodLeftEl.disabled = true
 						startPeriodRightEl.disabled = false
@@ -990,10 +990,10 @@ function initPeriodGroups() {
 		endPeriodEl.addEventListener('input', () => {
 			if (path.length >= 3) {
 				periodCenter = calculateCenter(path)
-				if ((periodCenter[1] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
+				if ((periodCenter[1] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
 					// Second expansion
 					endPeriodEl.value = variationsConfig[variation].expansions[1];
-				} else if ((periodCenter[0] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
+				} else if ((periodCenter[0] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
 					// First expansion
 					endPeriodEl.value = variationsConfig[variation].expansions[0];
 				}
@@ -1014,7 +1014,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [1000 / 2 - periodCenter[0], 1000 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [500 / 2 - periodCenter[0], 500 / 2 - periodCenter[1]]
 			applyView()
 		})
 		function endPeriodUpdate(value) {
@@ -1036,11 +1036,11 @@ function initPeriodGroups() {
 			} else {
 				if (path.length >= 3) {
 					periodCenter = calculateCenter(path)
-					if (periodCenter && (periodCenter[1] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
+					if (periodCenter && (periodCenter[1] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[1])) {
 						// Second expansion
 						endPeriodLeftEl.disabled = true
 						endPeriodRightEl.disabled = false
-					} else if (periodCenter && (periodCenter[0] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
+					} else if (periodCenter && (periodCenter[0] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[variation].expansions[0])) {
 						// First expansion
 						endPeriodLeftEl.disabled = true
 						endPeriodRightEl.disabled = false
@@ -1219,11 +1219,11 @@ function updatePeriodGroups() {
 				startPeriodLeftEl.disabled = false
 				startPeriodRightEl.disabled = true
 			} else {
-				if (periodCenter && (periodCenter[1] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[1])) {
+				if (periodCenter && (periodCenter[1] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[1])) {
 					// Second expansion
 					startPeriodLeftEl.disabled = true
 					startPeriodRightEl.disabled = false
-				} else if (periodCenter && (periodCenter[0] > 1000) && (startPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[0])) {
+				} else if (periodCenter && (periodCenter[0] > 500) && (startPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[0])) {
 					// First expansion
 					startPeriodLeftEl.disabled = true
 					startPeriodRightEl.disabled = false
@@ -1242,11 +1242,11 @@ function updatePeriodGroups() {
 				endPeriodLeftEl.disabled = false
 				endPeriodRightEl.disabled = true
 			} else {
-				if (periodCenter && (periodCenter[1] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[1])) {
+				if (periodCenter && (periodCenter[1] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[1])) {
 					// Second expansion
 					endPeriodLeftEl.disabled = true
 					endPeriodRightEl.disabled = false
-				} else if (periodCenter && (periodCenter[0] > 1000) && (endPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[0])) {
+				} else if (periodCenter && (periodCenter[0] > 500) && (endPeriodEl.valueAsNumber <= variationsConfig[periodVariationEl.value].expansions[0])) {
 					// First expansion
 					endPeriodLeftEl.disabled = true
 					endPeriodRightEl.disabled = false

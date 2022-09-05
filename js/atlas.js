@@ -23,12 +23,12 @@ window.addEventListener("error", function (e) {
 })
 
 function getPositionOfEntry(entry) {
-	let startX = 1000, startY = 1000
+	let startX = 500, startY = 500
 	for (const [x, y] of entry.path) {
 		startX = Math.min(x, startX)
 		startY = Math.min(y, startY)
 	}
-	if (startX === 1000 || startY === 1000) return null
+	if (startX === 500 || startY === 500) return null
 	return [parseInt(startX), parseInt(startY)]
 }
 
