@@ -66,7 +66,7 @@ init()
 
 async function init() {
 	// For Reviewing Reddit Changes
-	atlas = await (await fetch("https://atlas.proxyfil.fr/objects/accepted")).text()
+	atlas = await (await fetch("./atlas.json")).text()
 	atlas = JSON.parse(atlas.toString())
 	atlas.sort(function (a, b) {
 		if (a.center[1] < b.center[1]) {
