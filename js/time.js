@@ -13,7 +13,7 @@
 	========================================================================
 */
 
-const variationsConfig = {"default":{"name":"ZEvent2022 Place","code":"","default":0,"drawablePeriods":[0,0],"expansions":[],"versions":[{"timestamp":1662737400,"url":"https://media.discordapp.net/attachments/874044700309454858/1012703365999890503/Sans_titre.png?width=1000&height=1000"}],"icon":"<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 11 11' aria-hidden='true'><polygon points='3 0 8 0 8 1 9 1 9 2 10 2 10 3 9 3 9 4 10 4 10 3 11 3 11 4 11 8 10 8 10 9 9 9 9 8 8 8 8 7 7 7 7 5 8 5 8 4 7 4 7 3 6 3 6 2 7 2 7 1 5 1 5 2 4 2 4 5 5 5 5 6 3 6 3 5 1 5 1 7 3 7 3 8 4 8 4 10 8 10 8 11 3 11 3 10 2 10 2 9 1 9 1 8 0 8 0 3 1 3 1 2 2 2 2 1 3 1 3 0'/><polygon points='8 9 8 10 9 10 9 9'/></svg>"}}
+const variationsConfig = {"default":{"name":"ZEvent2022 Place","code":"","default":0,"drawablePeriods":[0,0],"expansions":[],"versions":[{"timestamp":1662737400,"url":"https://media.discordapp.net/attachments/874044700309454858/1012703365999890503/Sans_titre.png?width=2000&height=2000"}],"icon":"<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='currentColor' viewBox='0 0 11 11' aria-hidden='true'><polygon points='3 0 8 0 8 1 9 1 9 2 10 2 10 3 9 3 9 4 10 4 10 3 11 3 11 4 11 8 10 8 10 9 9 9 9 8 8 8 8 7 7 7 7 5 8 5 8 4 7 4 7 3 6 3 6 2 7 2 7 1 5 1 5 2 4 2 4 5 5 5 5 6 3 6 3 5 1 5 1 7 3 7 3 8 4 8 4 10 8 10 8 11 3 11 3 10 2 10 2 9 1 9 1 8 0 8 0 3 1 3 1 2 2 2 2 1 3 1 3 0'/><polygon points='8 9 8 10 9 10 9 9'/></svg>"}}
 	//,
 	//tfc: {
 	//	name: "The Final Clean",
