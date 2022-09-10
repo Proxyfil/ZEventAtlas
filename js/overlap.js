@@ -74,7 +74,7 @@ function initOverlap() {
 			}
 		}
 
-		const blankPercentage = (blank / (700 * 500)) * 100
+		const blankPercentage = (blank / (700 * 700)) * 100
 
 		console.info(blank + " blank pixels, which are " + blankPercentage.toPrecision(4) + "% of the canvas (" + (100 - blankPercentage).toPrecision(4) + "% mapped)")
 	}

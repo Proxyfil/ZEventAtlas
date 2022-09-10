@@ -50,7 +50,7 @@ const discordPattern = /^(?:(?:https?:\/\/)?(?:www\.)?(?:(?:discord)?\.?gg|disco
 
 let entryId = 0
 let path = []
-let center = [700, 500]
+let center = [700, 700]
 
 let websiteGroupElements = []
 let subredditGroupElements = []
@@ -818,7 +818,7 @@ function initDraw() {
 
 	scaleZoomOrigin = [
 		700 / 2 - center[0],// + container.offsetLeft
-		500 / 2 - center[1]// + container.offsetTop
+		700 / 2 - center[1]// + container.offsetTop
 	]
 
 	applyView()
@@ -947,7 +947,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [700 / 2 - periodCenter[0], 500 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [700 / 2 - periodCenter[0], 700 / 2 - periodCenter[1]]
 			applyView()
 		})
 
@@ -1014,7 +1014,7 @@ function initPeriodGroups() {
 			// Set zoom view
 			periodCenter = calculateCenter(path)
 			zoomOrigin = [innerContainer.clientWidth / 2 - periodCenter[0] * zoom, innerContainer.clientHeight / 2 - periodCenter[1] * zoom]
-			scaleZoomOrigin = [700 / 2 - periodCenter[0], 500 / 2 - periodCenter[1]]
+			scaleZoomOrigin = [700 / 2 - periodCenter[0], 700 / 2 - periodCenter[1]]
 			applyView()
 		})
 		function endPeriodUpdate(value) {

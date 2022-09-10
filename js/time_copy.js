@@ -153,7 +153,7 @@ async function updateBackground(newPeriod = currentPeriod, newVariation = curren
 		const canvas = document.createElement('canvas')
 		const context = canvas.getContext('2d')
 		context.canvas.width = 700
-		context.canvas.height = 500
+		context.canvas.height = 700
 		await Promise.all(configObject.url.map(async url => {
 			if (imageCache[url] === undefined) {
 				const fetchResult = await fetch(url, {
