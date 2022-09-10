@@ -394,14 +394,14 @@ body:not([data-dev]) .show-only-on-dev {
 	color: #4bba31;
 }
 .nav-link.unactive {
-	color: #ffffff;
+	color: #52cc37;
 }
 .nav-link.active:hover {
 	font-weight: 700;
 	color: #52cc37;
 }
 .nav-link.unactive:hover {
-	color: #dbdbdb;
+	color: #52cc37;
 }
 
 .period-group {
