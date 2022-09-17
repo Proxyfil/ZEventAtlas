@@ -16,7 +16,7 @@
 const discordWrapperEl = document.querySelector('#discord-contributors-wrapper')
 fetch('all-authors.txt')
 	.then(response => response.text())
-	.then(text => text.trim().split('\n').sort())
+	.then(text => text.trim().split(', ').sort())
 	.then(contributors => {
 		document.querySelector('#discord-contributors-count').textContent = contributors.length
 		const userEl = document.createElement('p')
