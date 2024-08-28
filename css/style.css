@@ -115,7 +115,7 @@ body[data-mode]:not([data-mode="draw"]) #drawNavButtons, [data-mode="draw"] #def
     width: 2000px;
     position: absolute;
     z-index: -2000;
-	background-color:rgba(0, 0, 0, .9)
+	background-color:#ffffff;
 }
 
 body[data-init-done] .listTransitioning #innerContainer {
