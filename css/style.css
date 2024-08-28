@@ -37,7 +37,7 @@ svg.icon {
 
 body[data-mode] {
 	overflow: hidden;
-	background-color: #111;
+	background-color: #000000;
 }
 
 #wrapper {
@@ -55,7 +55,7 @@ body[data-mode] {
 }
 
 .offcanvas {
-	top: 3.7rem !important;
+	top: 4rem !important;
 	padding-left: env(safe-area-inset-left);
 }
 
@@ -96,7 +96,7 @@ body[data-mode]:not([data-mode="draw"]) #drawNavButtons, [data-mode="draw"] #def
 
 #loading {
 	position: absolute;
-	background-color: rgba(17, 17, 17, .9);
+	background-color: #000000;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -115,7 +115,7 @@ body[data-mode]:not([data-mode="draw"]) #drawNavButtons, [data-mode="draw"] #def
     width: 2000px;
     position: absolute;
     z-index: -2000;
-	background-color:rgba(255, 255, 255, .9)
+	background-color:#ffffff;
 }
 
 body[data-init-done] .listTransitioning #innerContainer {
@@ -159,7 +159,7 @@ body[data-init-done] .listTransitioning #innerContainer {
 	width: 100%;
 	position: absolute;
 	right: env(safe-area-inset-right, 0);
-	top: 3.7rem;
+	top: 4rem;
 	max-height: calc(100% - 3.7rem);
 	overflow-y: auto;
 	z-index: 0;
@@ -169,7 +169,7 @@ body[data-init-done] .listTransitioning #innerContainer {
 	height: 40px;
 	width: 40px;
 	position: absolute;
-	top: 4.25rem;
+	top: 4.5rem;
 	right: calc(300px + env(safe-area-inset-right, 0));
 }
 
@@ -389,19 +389,42 @@ body:not([data-dev]) .show-only-on-dev {
 	display: none !important;
 }
 
+.uppercase{
+	text-transform: uppercase;
+}
+.bold{
+	font-weight:500;
+}
+.navbar-nav{
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.border-bottom-nav{
+	border-bottom: 1px solid #4ABA31!important;
+}
+@media (max-width: 767px) {
+	.responsive-column{
+		display: flex !important;
+		flex-direction: column !important;
+		height: auto;
+	}
+	.responsive-flex{
+		display: flex !important;
+	}
+}
 .nav-link.active {
-	font-weight: 700;
 	color: #4bba31;
 }
 .nav-link.unactive {
-	color: #52cc37;
+	color: #ffffff;
 }
-.nav-link.active:hover {
-	font-weight: 700;
-	color: #52cc37;
+.nav-link:hover {
+	color: #808080;
 }
-.nav-link.unactive:hover {
-	color: #52cc37;
+#main-navbar{
+	background-color: #161616 !important;
 }
 
 .period-group {
@@ -461,9 +484,75 @@ body:not([data-dev]) .show-only-on-dev {
 #credits a {
 	text-decoration: none;
 }
+main{
+	background-color: #000000;
+}
 
 #credits a:hover {
 	text-decoration: underline;
 }
 
-/* purgecss end ignore */
+@media (max-width: 575px) {
+	.subcontainer{
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #161616;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #4BBA31;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #808080;
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #161616;
+	min-width: 70px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block; 
+	text-align: center;
+}

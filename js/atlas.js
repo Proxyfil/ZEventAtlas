@@ -18,17 +18,17 @@ window.addEventListener("error", function (e) {
 	let errorMessage = "<h4 class=\"mb-3\">Une erreur est survenue :</h4>"
 	errorMessage += "<p class=\"text-danger\">" + e.message + "</p>"
 	errorMessage += "<p class=\"text-danger\">A la ligne " + e.lineno + "</p>"
-	errorMessage += "<p>Si cette erreur persiste, venez nous en informer sur <a href=\"https://discord.gg/vAdMCCaXXR\">notre serveur Discord</a>.</p>"
+	errorMessage += "<p>Si cette erreur persiste, venez nous en informer sur <a href=\"https://discord.gg/h772bnXTzS\">notre serveur Discord</a>.</p>"
 	document.getElementById("loadingContent").innerHTML = errorMessage
 })
 
 function getPositionOfEntry(entry) {
-	let startX = 700, startY = 700
+	let startX = canvasSize.x, startY = canvasSize.y
 	for (const [x, y] of entry.path) {
 		startX = Math.min(x, startX)
 		startY = Math.min(y, startY)
 	}
-	if (startX === 700 || startY === 700) return null
+	if (startX === canvasSize.x || startY === canvasSize.y) return null
 	return [parseInt(startX), parseInt(startY)]
 }
 

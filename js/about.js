@@ -13,22 +13,28 @@
 	========================================================================
 */
 
-const discordWrapperEl = document.querySelector('#discord-contributors-wrapper')
-fetch('all-authors.txt')
-	.then(response => response.text())
-	.then(text => text.trim().split(', ').sort())
-	.then(contributors => {
-		document.querySelector('#discord-contributors-count').textContent = contributors.length
-		const userEl = document.createElement('p')
-		for (const index in contributors) {
-			contributor = contributors[index]
-			if(userEl.innerText.length > 0) {
-				userEl.innerText = userEl.innerText+', '+contributor
+let years = ["2022","2024"]
+
+years.forEach(year => {
+	const discordWrapperEl = document.querySelector(`#discord-contributors-wrapper-${year}`)
+	fetch(`all-authors-${year}.txt`)
+		.then(response => response.text())
+		.then(text => text.trim().split(', ').sort())
+		.then(contributors => {
+			if(contributors != ""){
+				document.querySelector(`#discord-contributors-count-${year}`).textContent = contributors.length
 			}
-			else {
-				userEl.innerText = contributor
+			const userEl = document.createElement('p')
+			for (const index in contributors) {
+				contributor = contributors[index]
+				if(userEl.innerText.length > 0) {
+					userEl.innerText = userEl.innerText+', '+contributor
+				}
+				else {
+					userEl.innerText = contributor
+				}
 			}
-		}
-		discordWrapperEl.appendChild(userEl)
-		discordWrapperEl.appendChild(document.createTextNode(' '))
-	})
+			discordWrapperEl.appendChild(userEl)
+			discordWrapperEl.appendChild(document.createTextNode(' '))
+		})
+})

@@ -17,7 +17,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>About - The 2022 r/place Atlas</title>
+		<title>About - ZEvent Atlas</title>
 		<meta name="description" content="This is an atlas aiming to chart all the artworks created during the r/place April Fools event on Reddit in 2022. It is made with information to each artwork of the canvas provided by the community.">
 		<meta name="author" content="Place Atlas contributors (original by Roland Rytz)">
 		<meta name="application-name" content="2022 r/place Atlas">
@@ -47,28 +47,32 @@
 		<script src="./js/favicon.js" defer></script>
 	</head>
 	<body>
-		<nav id="main-navbar" class="navbar navbar-expand-md fixed-top bg-body border-bottom">
+		<nav id="main-navbar" class="navbar navbar-expand-md fixed-top bg-body border-bottom-nav">
 			<div class="container-fluid">
 				<a class="navbar-brand text-body d-flex align-items-center" href="./">
 					<picture>
 						<source srcset="./img/favicon-zevent.png" media="(prefers-color-scheme: dark)">
 						<img class="d-block me-2" height="32" width="32" src="./img/favicon-zevent.png" alt="">
 					</picture>
-					ZEvent2022 Atlas
+					ZEvent Atlas
 				</a>
 				<button class="navbar-toggler text-body collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="bi bi-list" aria-hidden="true"></i>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<hr class="d-md-none">
-					<ul class="navbar-nav flex-row flex-wrap ms-auto">
-						<li class="nav-item col-6 col-md-auto">
-							<a class="nav-link unactive" href="./" aria-current="page">Atlas</a>
+					<ul class="navbar-nav flex-wrap ms-auto responsive-column">
+						<li class="nav-item col-6 col-md-auto dropdown uppercase bold">
+							<a class="nav-link unactive dropbtn ">Années</a>
+							<div class="dropdown-content">
+								  <a class="nav-link unactive" href="/">2024</a>
+								  <a class="nav-link unactive" href="atlas-2022.html">2022</a>
+							</div>
 						</li>
-						<li class="nav-item col-6 col-md-auto">
-							<a class="nav-link active" href="./about.html">À propos</a>
+						<li class="nav-item col-6 col-md-auto uppercase bold">
+							<a class="nav-link active" href="./about.html">A propos</a>
 						</li>
-						<li class="nav-item col-6 col-md-auto">
+						<li class="nav-item col-6 col-md-auto uppercase bold">
 							<a class="nav-link unactive" href="https://zevent.gdoc.fr">Retour au GDoc</a>
 						</li>
 					</ul>
@@ -77,13 +81,13 @@
 		</nav>
 		<main class="pt-5">
 			<div class="container py-4">
-				<div class="row g-5">
-					<div class="col-md-7 col-xl-8">
-						<h1 class="display-5 fw-bold mb-4">ZEvent2022 Atlas</h1>
-						<p>Ceci est un atlas qui a pour but de répertorier tous les dessins fait par les communautés durant le <a href="https://www.zevent.fr" target="_blank" rel="noopener noreferrer">ZEvent2022</a>. Il est alimenté par les informations fournies par les communautés elles-mêmes.</p>
+				<div class="row g-5 subcontainer">
+					<div class="col-md-7 col-xl-8 rounded" style="background-color: #161616; margin-top: 3.5rem;">
+						<h1 class="display-5 fw-bold mb-4 mt-3">ZEvent Atlas</h1>
+						<p>Ceci est un atlas qui a pour but de répertorier tous les dessins fait par les communautés durant le <a href="https://www.zevent.fr" target="_blank" rel="noopener noreferrer">ZEvent</a>. Il est alimenté par les informations fournies par les communautés elles-mêmes.</p>
 						<p>Le code original a été développé par la communauté du <a href="https://www.reddit.com/r/placeAtlas2/" target="_blank" rel="noopener noreferrer">r/placeAtlas2</a> et est disponible sous la licence gratuite <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener noreferrer">AGPL</a> sur <a href="https://github.com/placeAtlas/atlas" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 						<hr>
-						<p>La version actuelle de ce site est gérée par les <a href="https://gdoc.fr" target="_blank" rel="noopener noreferrer">InGDoc</a> et est obtenable sur <a href="https://github.com/Proxyfil/ZEvent2022Atlas" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+						<p>La version actuelle de ce site est gérée par les <a href="https://gdoc.fr" target="_blank" rel="noopener noreferrer">InGDoc</a> et est obtenable sur <a href="https://github.com/Proxyfil/ZEventAtlas" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 						
 						<h2>Contribution</h2>
 						<p>L'Atlas est basé sur les contributions des communautés.</p>
@@ -94,18 +98,26 @@
 							<h3>Contributeurs au projet</h3>
 							<ul>
 								<li>Project Lead: 
-									<p>Les InGDoc <a href="https://gdoc.fr"><i aria-label="Website" class="bi bi-globe" target="_blank" rel="noopener noreferrer"></i></a> <a href="https://discord.gg/vAdMCCaXXR"><i aria-label="Website" class="bi bi-discord" target="_blank" rel="noopener noreferrer"></i></a> <a href="https://twitter.com/Les_InGdoc"><i aria-label="Twitter" class="bi bi-twitter" target="_blank" rel="noopener noreferrer"></i></a></p>
+									<p>Les InGDoc <a href="https://gdoc.fr"><i aria-label="Website" class="bi bi-globe" target="_blank" rel="noopener noreferrer"></i></a> <a href="https://discord.gg/h772bnXTzS"><i aria-label="Website" class="bi bi-discord" target="_blank" rel="noopener noreferrer"></i></a> <a href="https://twitter.com/Les_InGdoc"><i aria-label="Twitter" class="bi bi-twitter" target="_blank" rel="noopener noreferrer"></i></a></p>
 								</li>
 							</ul>
-							<h3>Les contributeurs des communautés</h3>
-							<p>L'Atlas du ZEvent2022 n'aurait pas été possible sans l'aide des <span id="discord-contributors-count"></span> contributeurs sur Discord.</p>
-							<p>Merci à tous pour vos ajouts, les corrections, les reports de bug et pour cette ambiance en général.</p>
-							<div id="discord-contributors-wrapper" style="text-align: justify;"></div>
+							<div class="border-top pt-3" id="contributors-2024">
+								<h3>Les contributeurs des communautés en <span style="color:#4ABA31">2024</span></h3>
+								<p>L'Atlas du ZEvent2024 n'aurait pas été possible sans l'aide des <span id="discord-contributors-count-2024"></span> contributeurs sur Discord.</p>
+								<p>Merci à tous pour vos ajouts, les corrections, les reports de bug et pour cette ambiance en général.</p>
+								<div id="discord-contributors-wrapper-2024" style="text-align: justify;"></div>
+							</div>
+							<div class="border-top pt-3" id="contributors-2022">
+								<h3>Les contributeurs des communautés en <span style="color:#4ABA31">2022</span></h3>
+								<p>L'Atlas du ZEvent2022 n'aurait pas été possible sans l'aide des <span id="discord-contributors-count-2022"></span> contributeurs sur Discord.</p>
+								<p>Merci à tous pour vos ajouts, les corrections, les reports de bug et pour cette ambiance en général.</p>
+								<div id="discord-contributors-wrapper-2022" style="text-align: justify;"></div>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-5 col-xl-4">
 						<div class="position-sticky" style="top: 5rem;">
-						  <div class="p-4 mb-3 bg-secondary bg-opacity-10 rounded">
+						  <div class="p-4 mb-3 rounded" style="background-color: #161616;">
 							<h4>Contact</h4>
 								<p>Si vous êtes un média d'information, un journaliste où que vous comptez utiliser cet Atlas comme illustration merci de nous contacter avant et de préciser vos crédits :</p>
 								<ul>
@@ -113,7 +125,7 @@
 								</ul>
 								<p>Pour le reste vous pouvez venir nous contacter sur Discord</p>
 								<ul>
-									<li><a href="https://discord.gg/vAdMCCaXXR" target="_blank" rel="noopener noreferrer">Nous sommes GDocœurs</a></li>
+									<li><a href="https://discord.gg/h772bnXTzS" target="_blank" rel="noopener noreferrer">Nous sommes GDocœurs</a></li>
 								</ul>
 						  </div>
 						</div>
