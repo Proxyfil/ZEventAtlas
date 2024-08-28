@@ -21,14 +21,15 @@ let previousZoomOrigin = [0, 0]
 let previousScaleZoomOrigin = [0, 0]
 
 const backgroundCanvas = document.createElement("canvas")
-backgroundCanvas.width = 700
-backgroundCanvas.height = 700
+backgroundCanvas.width = canvasSize.x
+backgroundCanvas.height = canvasSize.y
 const backgroundContext = backgroundCanvas.getContext("2d")
 
 const wrapper = document.getElementById("wrapper")
 const bottomBar = document.getElementById("bottomBar")
 
 const showListButton = document.getElementById("showListButton")
+const drawLink = document.getElementById("drawLink")
 const offcanvasList = document.getElementById("offcanvasList")
 const bsOffcanvasList = new bootstrap.Offcanvas(offcanvasList)
 
@@ -168,7 +169,7 @@ function toggleFixed(e, tapped) {
 	}
 	fixed = !fixed
 	if (!fixed) {
-		updateHovering(e, tapped)
+		updateHovering(e)
 		render()
 	}
 	entriesList.classList.add("disableHover")
@@ -473,8 +474,8 @@ function buildObjectsList(filter = null, sort = null) {
 				]
 
 				scaleZoomOrigin = [
-					700 / 2 - this.entry.center[0]
-					, 700 / 2 - this.entry.center[1]
+					canvasCenter.x - this.entry.center[0]
+					, canvasCenter.y - this.entry.center[1]
 				]
 
 				//console.log(zoomOrigin)
@@ -813,8 +814,8 @@ function highlightEntryFromUrl() {
 			]
 
 			scaleZoomOrigin = [
-				700 / 2 - entry.center[0]// + container.offsetLeft
-				, 700 / 2 - entry.center[1]// + container.offsetTop
+				canvasCenter.x - entry.center[0]// + container.offsetLeft
+				, canvasCenter.y - entry.center[1]// + container.offsetTop
 			]
 
 			//console.log(zoomOrigin)

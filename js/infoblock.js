@@ -97,6 +97,10 @@ function createInfoBlock(entry, isPreview) {
 			const area = calcPolygonArea(entry.path)
 			listElement.appendChild(createInfoListItem("Surface: ", `${area} pixels`))
 		}
+
+		if (entry.author_name) {
+			listElement.appendChild(createInfoListItem("Soumis par : ", `${entry.author_name}`))
+		}
 	}
 
 	if (!(entry.links.subreddit === undefined || entry.links.subreddit.length == 0)) {
