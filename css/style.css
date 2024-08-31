@@ -421,7 +421,7 @@ body:not([data-dev]) .show-only-on-dev {
 	color: #ffffff;
 }
 .nav-link:hover {
-	color: #808080;
+	color: #59e43a !important;
 }
 #main-navbar{
 	background-color: #161616 !important;
