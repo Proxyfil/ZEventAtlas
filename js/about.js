@@ -17,7 +17,7 @@ let years = ["2022","2024"]
 
 years.forEach(year => {
 	const discordWrapperEl = document.querySelector(`#discord-contributors-wrapper-${year}`)
-	fetch(`all-authors-${year}.txt`)
+	fetch(`./all-authors-${year}.txt`)
 		.then(response => response.text())
 		.then(text => text.trim().split(', ').sort())
 		.then(contributors => {
