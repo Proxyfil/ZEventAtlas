@@ -228,13 +228,13 @@ function updateTooltip(newPeriod, newVariation) {
 			if (tooltip.querySelector('div').textContent) tooltip.querySelector('div').innerHTML += "<br />"
 			if (typeof timestamp === "number") {
 				let date = new Date(timestamp * 1000)
-				tooltip.querySelector('div').innerHTML += `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+				tooltip.querySelector('div').innerHTML += `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 			}
 			else tooltip.querySelector('div').innerHTML += timestamp
 		})
 	} else if (typeof configObject.timestamp === "number") {
 		let date = new Date(configObject.timestamp * 1000)
-		tooltip.querySelector('div').innerHTML = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
+		tooltip.querySelector('div').innerHTML = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 	}
 	else tooltip.querySelector('div').textContent = configObject.timestamp
 
