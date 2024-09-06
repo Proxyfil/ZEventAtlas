@@ -402,7 +402,7 @@ body:not([data-dev]) .show-only-on-dev {
 	align-items: center;
 }
 .border-bottom-nav{
-	border-bottom: 1px solid #4ABA31!important;
+	border-bottom: 1px solid #4ABA31 !important;
 }
 @media (max-width: 767px) {
 	.responsive-column{
