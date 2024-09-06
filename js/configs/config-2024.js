@@ -1,6 +1,6 @@
 const canvasSize = {
-	x: 500,
-	y: 500
+	x: 700,
+	y: 700
 }
 window.canvasSize = canvasSize
 
