@@ -752,6 +752,21 @@ function initDraw() {
 
 		nameField.value = entry.name
 		descriptionField.value = entry.description
+		if(!entry.links.website){
+			entry.links.website = []
+		}
+		if(!entry.links.subreddit){
+			entry.links.subreddit = []
+		}
+		if(!entry.links.discord){
+			entry.links.discord = []
+		}
+		if(!entry.links.streamer){
+			entry.links.streamer = []
+		}
+		if(!entry.links.wiki){
+			entry.links.wiki = []
+		}
 
 		if (entry.links.website.length) {
 			entry.links.website.forEach((link, index, array) => {
