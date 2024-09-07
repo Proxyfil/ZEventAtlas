@@ -40,10 +40,10 @@ function initOverlap() {
 
 	function renderBackground(atlas) {
 
-		backgroundContext.clearRect(0, 0, canvas.width, canvas.height)
+		backgroundContext.clearRect(0, 0, window.canvasSize.y, window.canvasSize.x)
 
 		backgroundContext.fillStyle = "rgba(255, 255, 255, 1)"
-		backgroundContext.fillRect(0, 0, canvas.width, canvas.height)
+		backgroundContext.fillRect(0, 0, window.canvasSize.y, window.canvasSize.x)
 
 		for (let i = 0; i < atlas.length; i++) {
 
@@ -65,7 +65,7 @@ function initOverlap() {
 			backgroundContext.fill()
 		}
 
-		const pixels = backgroundContext.getImageData(0, 0, backgroundCanvas.width, backgroundCanvas.height).data
+		const pixels = backgroundContext.getImageData(0, 0, window.canvasSize.y, window.canvasSize.x).data
 		let blank = 0
 
 		for (let i = 0; i < pixels.length; i += 4) {
