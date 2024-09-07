@@ -21,8 +21,8 @@ let previousZoomOrigin = [0, 0]
 let previousScaleZoomOrigin = [0, 0]
 
 const backgroundCanvas = document.createElement("canvas")
-backgroundCanvas.width = canvasSize.x
-backgroundCanvas.height = canvasSize.y
+backgroundCanvas.width = window.canvasSize.y
+backgroundCanvas.height = window.canvasSize.x
 const backgroundContext = backgroundCanvas.getContext("2d")
 
 const wrapper = document.getElementById("wrapper")
@@ -278,7 +278,7 @@ function updateLines() {
 
 function renderBackground(atlas) {
 
-	backgroundContext.clearRect(0, 0, canvas.width, canvas.height)
+	backgroundContext.clearRect(0, 0, 1000, 1000)
 
 	//backgroundCanvas.width = 1000 * zoom
 	//backgroundCanvas.height = 1000 * zoom
@@ -286,7 +286,7 @@ function renderBackground(atlas) {
 	//backgroundContext.lineWidth = zoom
 
 	backgroundContext.fillStyle = "rgba(0, 0, 0, 0.6)"
-	backgroundContext.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height)
+	backgroundContext.fillRect(0, 0, 1000, 1000)
 
 	for (let i = 0; i < atlas.length; i++) {
 
@@ -580,13 +580,13 @@ function resetEntriesList() {
 
 async function render() {
 
-	context.clearRect(0, 0, canvas.width, canvas.height)
+	context.clearRect(0, 0, 1000, 1000)
 
 	//canvas.width = 1000*zoom
 	//canvas.height = 1000*zoom
 
 	context.globalCompositeOperation = "source-over"
-	context.clearRect(0, 0, canvas.width, canvas.height)
+	context.clearRect(0, 0, 1000, 1000)
 
 	if (hovered.length > 0) {
 		container.style.cursor = "pointer"

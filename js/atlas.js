@@ -23,12 +23,12 @@ window.addEventListener("error", function (e) {
 })
 
 function getPositionOfEntry(entry) {
-	let startX = canvasSize.x, startY = canvasSize.y
+	let startX = window.canvasSize.x, startY = window.canvasSize.y
 	for (const [x, y] of entry.path) {
 		startX = Math.min(x, startX)
 		startY = Math.min(y, startY)
 	}
-	if (startX === canvasSize.x || startY === canvasSize.y) return null
+	if (startX === window.canvasSize.x || startY === window.canvasSize.y) return null
 	return [parseInt(startX), parseInt(startY)]
 }
 
