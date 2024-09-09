@@ -101,6 +101,10 @@ function createInfoBlock(entry, isPreview) {
 		if (entry.author_name) {
 			listElement.appendChild(createInfoListItem("Soumis par : ", `${entry.author_name}`))
 		}
+
+		if (entry.modificator_name) {
+			listElement.appendChild(createInfoListItem("Modifié par : ", `${entry.modificator_name}`))
+		}
 	}
 
 	if (!(entry.links.subreddit === undefined || entry.links.subreddit.length == 0)) {
