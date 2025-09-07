@@ -13,7 +13,7 @@
 	========================================================================
 */
 
-let years = ["2022","2024"]
+let years = ["2022","2024","2025"]
 
 years.forEach(year => {
 	const discordWrapperEl = document.querySelector(`#discord-contributors-wrapper-${year}`)
