@@ -12,5 +12,5 @@ _____________________________________________________________________
 
 rolandrytz.ch and draemm.li:
 Stuff and things by Roland Rytz
-
+Refactored by Proxyfil
 
