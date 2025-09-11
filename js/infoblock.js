@@ -217,7 +217,7 @@ function createInfoBlock(entry, isPreview) {
 		const editElement = document.createElement("a")
 		editElement.textContent = "Modifier"
 		editElement.className = "btn btn-sm btn-outline-primary"
-		editElement.href = "./?mode=draw&id=" + entry.id
+		editElement.href = "?mode=draw&id=" + entry.id
 		editElement.title = "Modifier " + entry.name
 		idElementContainer.appendChild(editElement)
 	}
