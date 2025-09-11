@@ -14,10 +14,10 @@ let variationsConfig = {
     "zevent2024": {
         "name": "ZEvent2024 Place",
         "code": "",
-        "default": 672,
+        "default": 671,
         "drawablePeriods": [
             0,
-            672
+            671
         ],
         "expansions": [],
         "versions": [
